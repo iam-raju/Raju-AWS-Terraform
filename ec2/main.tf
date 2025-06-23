@@ -13,7 +13,6 @@ module "ec2_instance" {
 
 # dont clone and run it form your local laptap
 
-
 provider "aws" {
   region = "ap-south-1"
 }
