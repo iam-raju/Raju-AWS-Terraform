@@ -1,7 +1,8 @@
 module "vpc" {
-  source = "../../modules/vpc"
+  source     = "git::https://github.com/iam-raju/Raju-AWS-Terraform.git//modules/vpc"
 
-  cidr = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/16"    # must match variable "cidr_block"
+  vpc_name   = "raju-vpc"      # optional, defaults to "my-vpc" if you omit
 }
 
 module "alb" {
